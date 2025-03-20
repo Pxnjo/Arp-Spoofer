@@ -60,7 +60,7 @@ arp = ARP(pdst=str(broadcast_ip))  # Impostiamo l'indirizzo di broadcast come de
 packet = ether/arp
 
 # Invia il pacchetto ARP e raccogli le risposte
-result = srp(packet, timeout=3, verbose=False)[0]
+result = srp(packet, timeout=5, verbose=True)[0]
 
 # Estrai gli IP e i MAC degli apparati che hanno risposto
 devices = []
